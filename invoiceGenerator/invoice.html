@@ -1,0 +1,599 @@
+<!doctype html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width" />
+	<title>Invoice Template</title>
+	<style type="text/css">img {
+      border: none;
+      -ms-interpolation-mode: bicubic;
+      max-width: 100%;
+    }
+
+    body {
+      background-color: #f6f6f6;
+      font-family: "Helvetica", "Arial", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 0;
+      padding: 0;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    table {
+      border-collapse: separate;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      width: 100%;
+    }
+
+    table td {
+      font-family: "Helvetica", "Arial", sans-serif;
+      font-size: 14px;
+      vertical-align: top;
+      color: #4d4d4d
+    }
+
+    .body {
+      background-color: #f6f6f6;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    .container {
+      display: block;
+      margin: 0 auto !important;
+      /* makes it centered */
+      max-width: 580px;
+      padding: 10px;
+      width: 580px;
+    }
+
+    .content {
+      box-sizing: border-box;
+      display: block;
+      margin: 0 auto;
+      max-width: 580px;
+      padding: 10px;
+    }
+
+    .main {
+      background: #f6f6f6;
+      border-radius: 3px;
+      width: 100%;
+    }
+
+    .wrapper {
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    .content-block {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    .footer {
+      clear: both;
+      margin-top: 10px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .footer td,
+    .footer p,
+    .footer span,
+    .footer a {
+      color: #999999;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: #000000;
+      font-family: "Helvetica", "Arial", sans-serif;
+      font-weight: bold;
+      line-height: 1.4;
+      margin: 0;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+
+    h1 {
+      font-size: 35px;
+      font-weight: 300;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    p,
+    ul,
+    ol {
+      font-family: "Helvetica", "Arial", sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+      margin-bottom: 15px;
+    }
+
+    p li,
+    ul li,
+    ol li {
+      list-style-position: inside;
+      margin-left: 5px;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: underline;
+    }
+
+    .btn {
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .btn>tbody>tr>td {
+      padding-bottom: 15px;
+    }
+
+    .btn table {
+      width: auto;
+    }
+
+    .btn table td {
+      background-color: #ffffff;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .btn a {
+      background-color: #ffffff;
+      border: solid 1px #3498db;
+      border-radius: 5px;
+      box-sizing: border-box;
+      color: #3498db;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+      padding: 12px 25px;
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+
+    .btn-primary table td {
+      background-color: #3498db;
+    }
+
+    .btn-primary a {
+      background-color: #3498db;
+      border-color: #3498db;
+      color: #ffffff;
+    }
+
+    .last {
+      margin-bottom: 0;
+    }
+
+    .first {
+      margin-top: 0;
+    }
+
+    .align-center {
+      text-align: center;
+    }
+
+    .align-right {
+      text-align: right;
+    }
+
+    .align-left {
+      text-align: left;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    .mt0 {
+      margin-top: 0;
+    }
+
+    .mb0 {
+      margin-bottom: 0;
+    }
+
+    .preheader {
+      color: transparent;
+      display: none;
+      height: 0;
+      max-height: 0;
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+      mso-hide: all;
+      visibility: hidden;
+      width: 0;
+    }
+
+    .powered-by a {
+      text-decoration: none;
+    }
+
+    hr {
+      border: 0;
+      border-bottom: 1px solid #f6f6f6;
+      margin: 20px 0;
+    }
+
+    @media only screen and (max-width: 620px) {
+      table[class=body] h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important;
+      }
+
+      table[class=body] p,
+      table[class=body] ul,
+      table[class=body] ol,
+      table[class=body] td,
+      table[class=body] span,
+      table[class=body] font,
+      table[class=body] a {
+        font-size: 10px !important;
+      }
+
+      table[class=body] img {
+        max-width: 32px;
+        max-height: 32px;
+      }
+
+      table[class=body] .wrapper,
+      table[class=body] .article {
+        padding: 10px !important;
+      }
+
+      table[class=body] .content {
+        padding: 0 !important;
+      }
+
+      table[class=body] .container {
+        padding: 0 !important;
+        width: 100% !important;
+      }
+
+      table[class=body] .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important;
+      }
+
+      table[class=body] .btn table {
+        width: 100% !important;
+      }
+
+      table[class=body] .btn a {
+        width: 100% !important;
+      }
+
+      table[class=body] .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important;
+      }
+    }
+
+    @media all {
+      .ExternalClass {
+        width: 100%;
+      }
+
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
+
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important;
+      }
+
+      .btn-primary table td:hover {
+        background-color: #34495e !important;
+      }
+
+      .btn-primary a:hover {
+        background-color: #34495e !important;
+        border-color: #34495e !important;
+      }
+    }
+	</style>
+</head>
+<body>
+<table align="left" height="100%" style="border-spacing:0;border-collapse:collapse;vertical-align:top;color:#4d4d4d;font-family:'Helvetica','Arial',sans-serif;font-weight:normal;padding:0;margin:0;text-align:left;font-size:14px;line-height:19px;height:100%;width:100%" valign="top" width="100%">
+	<tbody>
+		<tr align="left" style="padding:0;vertical-align:top;text-align:left" valign="top">
+			<td align="center" style="word-break:break-word;vertical-align:top;color:#4d4d4d;font-family:'Helvetica','Arial',sans-serif;font-weight:normal;padding:0;margin:0;font-size:14px;line-height:19px;text-align:center;border-collapse:collapse" valign="top">
+			<center style="width:100%">
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody>
+					<tr style="background:#e8e8e8">
+						<td align="center" height="50"></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table>
+				<tbody>
+					<tr>
+						<td width="10%"></td>
+						<td height="20"></td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td align="center">
+						<table border="0" cellpadding="0" cellspacing="0" width="700">
+							<tbody>
+								<tr>
+									<td align="left" width="475">
+									<p style="font-size:11px;line-height:18px;text-transform:lowercase;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:0">Computer Generated</p>
+
+									<p style="font-size:45px;line-height:40px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;font-weight:100;letter-spacing:3px;text-transform:uppercase;color:#666666;margin:0">Invoice</p>
+									</td>
+									<td align="left" width="500">
+									<p style="font-size:12px;line-height:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:0"><strong>BILL_FROM</strong></p>
+
+									<p style="font-size:10px;line-height:18px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:0">ADDRESS_DETAILS</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td height="30"></td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td><strong>Bill to</strong></td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td align="center" style="background:#e8e8e8">
+						<table border="0" cellpadding="0" cellspacing="0" width="700">
+							<tbody>
+								<tr>
+									<td align="left" style="padding:5px" valign="top" width="475">
+									<p style="font-size:12px;line-height:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:0;font-weight:300">
+									BILL_TO_DETAILS</p>
+									</td>
+									<td align="left" valign="top" width="500">
+									<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tbody>
+											<tr>
+												<td width="475">
+												<p style="font-size:12px;line-height:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:0;font-weight:300"><strong>Invoice ID</strong></p>
+												</td>
+												<td width="500">
+												<p style="font-size:12px;line-height:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:0;font-weight:300;text-align:right">ACCOUNT_NUMBER</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+												<p style="font-size:12px;line-height:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:0;font-weight:300"><strong>Invoice Date</strong></p>
+												</td>
+												<td>
+												<p style="font-size:12px;line-height:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:0;font-weight:300;text-align:right">INVOICE_DATE</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+												<p style="font-size:12px;line-height:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:0;font-weight:300"><strong>Due Date</strong></p>
+												</td>
+												<td>
+												<p style="font-size:12px;line-height:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:0;font-weight:300;text-align:right">INVOICE_DUE_DATE</p>
+												</td>
+											</tr>
+											<tr>
+												<td>
+												<p style="font-size:12px;line-height:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:0;font-weight:300"><strong>Payment Method</strong></p>
+												</td>
+												<td>
+												<p style="font-size:12px;line-height:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:0;font-weight:300;text-align:right">EFT</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td height="25"></td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td align="center">
+						<table border="0" cellpadding="0" cellspacing="0" width="700">
+							<tbody>
+								<tr style="background:#c80000;border-radius:3px">
+									<td align="left" width="50">
+									<p style="font-size:14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#ffffff;font-weight:bold;margin:10px 0"></p>
+									</td>
+									<td align="left" width="200">
+									<p style="font-size:14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#ffffff;font-weight:bold;margin:10px 0">Description</p>
+									</td>
+									<td align="left" style="text-align:center" width="80">
+									<p style="font-size:14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#ffffff;font-weight:bold;margin:10px 0">Qty</p>
+									</td>
+									<td align="left" style="text-align:center" width="80">
+									<p style="font-size:14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#ffffff;font-weight:bold;margin:10px 0">Unit price</p>
+									</td>
+									<td align="left" style="text-align:center" width="90">
+									<p style="font-size:14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#ffffff;font-weight:bold;margin:10px 0">Line Amount</p>
+									</td>
+								</tr>
+								<tr>
+									<td align="center" style="border-bottom:1px solid #cccccc" valign="top">
+									<p style="font-size:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:10px 0"><img alt="" height="25" src="https://permanentlink.co.za/images/Home-Server-icon.png" width="25" /></p>
+									</td>
+									<td align="left" style="border-bottom:1px solid #cccccc;padding:10px 15px 10px 0" valign="middle">
+									<p style="font-size:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#428bca;margin:0 0 5px 0;font-weight:bold">Service: <a href="#">Invoice Generator</a></p>
+									</td>
+									<td align="center" style="border-bottom:1px solid #cccccc" valign="top">
+									<p style="font-size:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:10px 0 10px 0">QUANTITY</p>
+									</td>
+									<td align="center" style="border-bottom:1px solid #cccccc" valign="top">
+									<p style="font-size:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:10px 0 10px 0">QUNITPRICE</p>
+									</td>
+									<td align="right" style="border-bottom:1px solid #cccccc" valign="top">
+									<p style="font-size:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:10px 0 10px 0;text-align:right;padding-right:5px">LINEAMOUNT</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td height="30"></td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td align="center">
+						<table border="0" cellpadding="0" cellspacing="0" width="700">
+							<tbody>
+								<tr>
+									<td align="right">
+									<table border="0" cellpadding="0" cellspacing="0" width="">
+										<tbody>
+											<tr>
+												<td align="left" width="475"><img alt="Total" height="71" src="https://permanentlink.co.za/images/accounting-icon-png-19.png" width="72" /></td>
+												<td align="left" width="500">
+												<table border="0" cellpadding="0" cellspacing="0" width="">
+													<tbody>
+														<tr>
+															<td></td>
+															<td style="border-bottom:1px solid #cccccc">
+															<p style="font-size:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:10px 0;margin-top:0;padding-left:5px">Subtotal</p>
+															</td>
+															<td style="border-bottom:1px solid #cccccc">
+															<p style="font-size:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#428bca;margin:10px 0;font-weight:bold;margin-top:0;text-align:right;padding-right:5px">UNIT_SUB_TOTAL</p>
+															</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td style="border-bottom:4px solid #c80000">
+															<p style="font-size:14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#c80000;margin:10px 0;font-weight:bold;padding-left:5px">Total</p>
+															</td>
+															<td style="border-bottom:4px solid #c80000">
+															<p style="font-size:14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#c80000;margin:10px 0;font-weight:bold;text-align:right;padding-right:5px">UNIT_TOTAL</p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td height="40"></td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td align="center" style="background:#e8e8e8">
+						<table border="0" cellpadding="0" cellspacing="0" width="650">
+							<tbody>
+								<tr>
+									<td align="left">
+									<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tbody>
+											<tr>
+												<td height="65" style="border-right:1px solid #cccccc" valign="middle" width="90"><img alt="Banking Details" height="38" src="https://permanentlink.co.za/images/bank.jpg" width="70" /></td>
+												<td width="20"></td>
+												<td valign="middle">
+												<p style="font-size:12px;line-height:18px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:0 0 15px 0;font-weight:300">ACCOUNT HOLDER: <strong>HOLDER NAME</strong><br />
+												BANK: <strong>YOUR BANK</strong><br />
+												ACCOUNT NO: <strong>0000000000000</strong><br />
+												ACCOUNT TYPE: <strong>type</strong><br />
+												SWIFT CODE: <strong>0000000</strong><br />
+												BRANCH CODE: <strong>0000000</strong><br />
+												REFERENCE: <strong>ACCOUNT_NUMBER</strong></p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td height="20"></td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td>
+						<table>
+							<tbody>
+								<tr>
+									<td align="right">
+									<p style="font-size:12px;line-height:18px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','Lucida Grande',sans-serif;color:#666666;margin:0 0 15px 0;font-weight:300;margin:0 0 0 0">Powered by Permanent Link.</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<td width="10%"></td>
+					</tr>
+					<tr>
+						<td width="10%"></td>
+						<td height="40"></td>
+						<td width="10%"></td>
+					</tr>
+				</tbody>
+			</table>
+			</center>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
