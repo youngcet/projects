@@ -68,12 +68,17 @@
         }
     }
 
+    # this is dummy data
+    # this data will be coming from a database
     $data = array('INVOICE_TEMPLATE' => 'invoice.html', 'BILL_TO_DETAILS' => 'Cedric Maenetja<br/>Address', 
                     'ACCOUNT_NUMBER' => '0000000', 'INVOICE_DATE' => '29/11/2019', 'INVOICE_DUE_DATE' => '29/11/2019',
                     'QUANTITY' => 1, 'QUNITPRICE' => 'R0.50', 'LINEAMOUNT' => 'R0.50', 'UNIT_SUB_TOTAL' => 'R0.50', 'UNIT_TOTAL' => 'R0.50',
                     'BILL_FROM' => 'Mr XX', 'ADDRESS_DETAILS' => '000 000 0000<br/>username@somedomain.co.za');
     
+    # initialze the class
     $htmlBuilder = new HTMLTemplateBuilder($data);
+
+    # get the substituted data.
     $substitutedHTML = $htmlBuilder->substituteTemplate();
     echo $substitutedHTML;
 ?>
