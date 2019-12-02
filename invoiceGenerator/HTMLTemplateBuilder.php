@@ -1,28 +1,24 @@
 <?php
 
+    include('Utils.php');
+
     # this class will be used to handle all the HTML substitutions
+    # extends (inherits) the Utils
     class HTMLTemplateBuilder
     {
+        use Utils;
+
+        private $_logName;
         private $_data;
         
         public function __construct($data)
         {
             $this->_data = $data;
-
-            try
-            {
-                # validate the data recieved
-                # ensure that it meets all the requirements
-                $this->validateData();
-            }
-            catch (Exception $e)
-            {
-                # if an exception is thrown, die
-                die('Caught exception: '.  $e->getMessage()); 
-            }
+            $this->_logName = 'logs/'. get_class($this).'.log';
+            $this->prepareData();
         }
         
-        public function substituteTemplate()
+        public function getSubstitutedTemplate()
         {
             # convert the file contents to string
             $htmlTemplate = file_get_contents($this->_data['INVOICE_TEMPLATE']);
@@ -40,45 +36,23 @@
             return $htmlTemplate;
         }
 
-        public function validateData()
+        public function prepareData()
         {
-            # check that array is an associative array
-            if(array_keys($this->_data) == range(0, count($this->_data) - 1))
+            try
             {
-                throw new Exception('Array missing keys.');
+                # validate the data recieved
+                # ensure that it meets all the requirements
+                $this->arrayKeysExists($this->_data);
+                $this->isArrayEmpty($this->_data);
+                $this->keyExists($this->_data, 'INVOICE_TEMPLATE');
+                $this->fileExists($this->_data['INVOICE_TEMPLATE']);
             }
-            
-            # check that data is not empty
-            if (empty($this->_data))
+            catch (Exception $e)
             {
-                throw new Exception('Data cannot be empty.');
-            }
-
-            # check that the actual template exists
-            if (!file_exists($this->_data['INVOICE_TEMPLATE']))
-            {
-                throw new Exception($this->_data['INVOICE_TEMPLATE'] .'does not exist');
-            }
-
-            # check that the key TEMPLATE exists
-            if (array_key_exists($this->_data['INVOICE_TEMPLATE'], $this->_data))
-            {
-                throw new Exception('template is not defined.');
+                $this->logEvent($this->_logName, 'Caught exception: '.  $e->getMessage());
+                # if an exception is thrown, die
+                die('Caught exception: '.  $e->getMessage()); 
             }
         }
     }
-
-    # this is dummy data
-    # this data will be coming from a database
-    $data = array('INVOICE_TEMPLATE' => 'invoice.html', 'BILL_TO_DETAILS' => 'Cedric Maenetja<br/>Address', 
-                    'ACCOUNT_NUMBER' => '0000000', 'INVOICE_DATE' => '29/11/2019', 'INVOICE_DUE_DATE' => '29/11/2019',
-                    'QUANTITY' => 1, 'QUNITPRICE' => 'R0.50', 'LINEAMOUNT' => 'R0.50', 'UNIT_SUB_TOTAL' => 'R0.50', 'UNIT_TOTAL' => 'R0.50',
-                    'BILL_FROM' => 'Mr XX', 'ADDRESS_DETAILS' => '000 000 0000<br/>username@somedomain.co.za');
-    
-    # initialze the class
-    $htmlBuilder = new HTMLTemplateBuilder($data);
-
-    # get the substituted data.
-    $substitutedHTML = $htmlBuilder->substituteTemplate();
-    echo $substitutedHTML;
 ?>
