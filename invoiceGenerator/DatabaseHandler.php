@@ -9,10 +9,10 @@
         
         // a proctected function so that we can extend this class from other classes
         protected function connect(){
-            $this->servername = "localhost";
-            $this->username = "root";
-            $this->password = "";
-            $this->dbname = "projects";
+            $this->servername = "servername";
+            $this->username = "username";
+            $this->password = "password";
+            $this->dbname = "databasename";
             
             $conn = new mysqli($this->servername,$this->username,$this->password,$this->dbname);
             return $conn;
