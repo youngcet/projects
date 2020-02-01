@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include ("/home/permawer/public_html/var/local/api/ExecuteQuery.php");
+    include ("ExecuteQuery.php");
     require_once('Utils.php');
     require_once('SendMail.php');
     
