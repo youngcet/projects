@@ -32,7 +32,7 @@ CREATE TABLE `gn_invoice_accounts` (
   `uuid` varchar(20) NOT NULL,
   `fullname` varchar(100) DEFAULT NULL,
   `emailaddress` varchar(100) DEFAULT NULL,
-  `pwd` varchar(16) DEFAULT NULL,
+  `pwd` varchar(500) DEFAULT NULL,
   `contact_number` varchar(13) DEFAULT NULL,
   `account_type` varchar(10) DEFAULT NULL,
   `account_number` varchar(10) DEFAULT NULL,

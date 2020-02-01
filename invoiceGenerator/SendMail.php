@@ -1,17 +1,12 @@
 <?php
 
-    require_once('Utils.php');
-
     class SendMail
     {
-        use Utils;
-
         private $_logName;
         private $_msg;
 
         public function __construct($msg)
         {
-            $this->_logName = 'logs/'. get_class($this).'.log';
             $this->_msg = $msg;
 
             try
@@ -20,7 +15,6 @@
             }
             catch (Exception $e)
             {
-                $this->logEvent($this->_logName, 'Caught exception: '.  $e->getMessage());
                 # if an exception is thrown, die
                 die('Caught exception: '.  $e->getMessage()); 
             }
@@ -44,18 +38,27 @@
             # split the recipients (incase there's multiple recipients)
             $recipients = preg_split('/\,/', $this->_msg['recipient']);
 
-            foreach ($recipients as $recipient)
+            $results = array();
+            $count = 0;
+            if (is_array($recipients))
             {
-                // send the email
-                if (!mail(trim($recipient), $this->_msg['subject'], $this->_msg['message'], implode("\r\n", $headers), "-odb -f ".$this->_msg['from']))
+                foreach ($recipients as $recipient)
                 {
-                    $this->logEvent($this->_logName, "Failed to send mail to $recipient: ".error_get_last()['message']);
-                }
-                else
-                {
-                    $this->logEvent($this->_logName, "Mail sent to $recipient");
+                    // send the email
+                    if (!mail(trim($recipient), $this->_msg['subject'], $this->_msg['message'], implode("\r\n", $headers), "-odb -f ".$this->_msg['from']))
+                    {
+                        $results[$count] = array ('recipient' => trim($recipient), 'status' => 'failed');
+                    }
                 }
             }
+            else
+            {
+                if (!mail(trim($recipients), $this->_msg['subject'], $this->_msg['message'], implode("\r\n", $headers), "-odb -f ".$this->_msg['from']))
+                {
+                    $results[] = array ('recipient' => trim($recipients), 'status' => 'failed');
+                }
+            }
+            
         }
     }
 ?>
