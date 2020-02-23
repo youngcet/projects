@@ -19,6 +19,7 @@
         $pwd = strip_tags(trim($_POST['password']));
         $account_number = rand(1111111, 9999999);
         $account_type = 'Trial';
+        $address = strip_tags(trim($_POST['address']));
         $trial_end_date = $utils->addDays(30);
         
         $name = explode(' ',trim($name));
@@ -46,7 +47,7 @@
             {
                 $fullname = $name[0].' '.$name[1];
                 // record does not exist
-                $query = "INSERT INTO gn_invoice_accounts (uuid, fullname, emailaddress, pwd, contact_number, account_type, account_number, trial_end_date) VALUES ('$uuid', '$fullname', '$email', '$pwd', '$contactNumber', '$account_type', '$account_number', '$trial_end_date')";
+                $query = "INSERT INTO gn_invoice_accounts (uuid, fullname, emailaddress, pwd, contact_number, account_type, account_number, address, trial_end_date) VALUES ('$uuid', '$fullname', '$email', '$pwd', '$contactNumber', '$account_type', '$account_number', '$address', '$trial_end_date')";
                 
                 if ($executeSQl->execute($query)['results'])
                 {
@@ -1021,6 +1022,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
           <p><input class="w3-input w3-border" type="email" placeholder="Email" name="email" required></p>
           <p><input class="w3-input w3-border" type="text" placeholder="Contact No." name="contact-number" required></p>
           <p><input class="w3-input w3-border" type="password" placeholder="Password" name="password" required></p>
+          <p><textarea class="w3-input w3-border" type="text" placeholder="Address" name="address" required></textarea></p>
           <button type="submit" class="w3-button w3-block w3-black" name="register">Submit</button>
         </form>
         <p>Already have an account? Sign In <a href="?signin">here</a></p>
