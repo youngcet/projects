@@ -36,6 +36,7 @@ CREATE TABLE `gn_invoice_accounts` (
   `contact_number` varchar(13) DEFAULT NULL,
   `account_type` varchar(10) DEFAULT NULL,
   `account_number` varchar(10) DEFAULT NULL,
+  `address` text DEFAULT NULL,
   `date` datetime DEFAULT CURRENT_TIMESTAMP,
   `trial_end_date` varchar(20) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
