@@ -26,7 +26,7 @@
                             '{{emailaddress}}' => 'someemailaddress'
                         );
                         
-            echo $this->render('pages/index.html', $data);
+            echo $this->render('index.html', $data);
         }
     }
     
